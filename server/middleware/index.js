@@ -16,7 +16,7 @@ const requiresSecure = (req, res, next) => {
     }
     return next();
 }
-const bypassStructure = (req, res, next) => {
+const bypassSecure = (req, res, next) => {
     next();
 }
 
@@ -27,5 +27,5 @@ if(process.env.NODE_ENV === 'production'){
     module.exports.requiresSecure == requiresSecure;
 }
 else{
-    module.exports.requiresSecure == bypasssSecure;
+    module.exports.requiresSecure == bypassSecure;
 }
