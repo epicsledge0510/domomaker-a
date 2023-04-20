@@ -13,11 +13,7 @@ require('dotenv').config();
 
 const router = require('./router.js');
 
-<<<<<<< HEAD
 const port = process.env.port || process.env.NODE_PORT || 3001;
-=======
-const port = process.env.PORT || process.env.NODE_PORT || 3000;
->>>>>>> 9f9a22e4ea9b63b686a7deb6590119468d81d1f8
 
 const dbURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1/DomoMaker';
 mongoose.connect(dbURI).catch((err) => {
@@ -68,8 +64,5 @@ redisClient.connect().then(() => {
       throw err;
     }
     console.log(`Listening on port ${port}`);
-<<<<<<< HEAD
   });
-=======
->>>>>>> 9f9a22e4ea9b63b686a7deb6590119468d81d1f8
 });
